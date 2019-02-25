@@ -106,11 +106,26 @@ $(function() {
     })
 
     /* TODO: Write a new test suite named "New Feed Selection" */
-
+    describe('New Feed Selection', () => {
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-    
+        let oldfeed, newfeed;
+        beforeEach((done) => {
+            loadFeed(1, ()=> {
+                oldfeed = document.querySelector('.feed').textContent;
+                loadFeed(2, () => {
+                    newfeed = document.querySelector('.feed').textContent;
+                    done();
+                })
+            })
+            
+        })
+
+        it('load new feed', () => {
+            expect(oldfeed).not.toMatch(newfeed);
+        })
+    })
         
 }());
