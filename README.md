@@ -5,7 +5,7 @@
 
 # How to run this project
 
-- Clone the repository using `code` git clone https://github.com/aantunes89/Udacity-Feed-Reader-Jasmine.git `code` or **download** it.
+- Clone the repository using `git clone https://github.com/aantunes89/Udacity-Feed-Reader-Jasmine.git` or **download** it.
 
 - Open the index.html in your browser.
 
